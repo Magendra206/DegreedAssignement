@@ -3,23 +3,26 @@ package com.degreed.assignement;
 public class ArmstrongNumberRange {
 
 	public static void main(String[] args) {
-		for (int k = 100 ; k <= 999 ; k++)
-        {
-                   int n = k;
-                   int d = 0;
-                   int s = 0;
-
-                   while (n > 0)
-                    {
-                                d = n % 10;
-                                s = s + (d * d * d);
-                                n = n / 10;
-                    }
-                    if (k == s)
-                     {
-                                System.out.println(k + "Arm strong number");
-                      }
-         }
+	int i=100,arm;
+		System.out.println("Armstrong numbers between 100-999");
+		while(i<1000)
+		{
+		  arm=armstrongOrNot(i);
+		  if(arm==i)
+		  System.out.println(i);
+		  i++;
+		 }
+	}
+	 static int armstrongOrNot(int num) {
+		 int x,a=0;
+			while(num!=0)
+			{
+				x=num%10;
+				a=a+(x*x*x);
+				num/=10 ;
+			}
+			return a;
+		
 	}
 
 }
