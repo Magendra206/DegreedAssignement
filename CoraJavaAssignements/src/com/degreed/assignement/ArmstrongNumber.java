@@ -1,4 +1,4 @@
-package com.degreed.assignement;
+ package com.degreed.assignement;
 
 import java.util.Scanner;
 
